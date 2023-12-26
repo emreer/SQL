@@ -1,0 +1,17 @@
+SELECT title, description from film; 
+--film tablosundaki title ve description kolonları sıralandı.
+
+SELECT * from film
+WHERE length>60 AND length<75; 
+--film tablosunda bulunan tüm sütunlardaki film uzunluğu (length) 60 dan büyük VE 75 ten küçük olma koşullarıyla sıralandı.
+
+SELECT * from film
+WHERE rental_rate = 0.99 AND replacement_cost = 12.99 OR replacement_cost = 28.99;
+--film tablosunda bulunan tüm sütunlardaki rental_rate 0.99 VE replacement_cost 12.99 VEYA 28.99 olma koşullarıyla sıralandı.
+
+SELECT * FROM customer --customer isimli tablodaki tüm veriler çekildi.
+WHERE first_name = 'Mary'; --first_name'i 'Mary' olan veriler çekildi. last_name 'Smith' olarak okundu.
+
+SELECT * FROM film --film tablosundaki tüm veriler okundu.
+WHERE NOT (length > 50 AND rental_rate = 2.99 OR rental_rate = 4.99);
+--WHERE NOT ile tam tersi yapıldı.
